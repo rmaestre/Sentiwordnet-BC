@@ -1,7 +1,7 @@
 Sentiwordnet-BC
 ===============
 
-Sentiwordnet binding class to perform Sentiment Analysis and Opinion Mining 
+[Sentiwordnet](http://www.esuli.it/wp-content/uploads/2011/07/LREC10.pdf)  binding class to perform Sentiment Analysis and Opinion Mining 
 
 ```
 host$ python sentiwordnet.py 
