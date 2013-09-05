@@ -80,12 +80,13 @@ if __name__ == "__main__":
     # Init class
     time_start = time.time()
     sentiwordnet = Sentiwordnet()
-    print(time.time() - time_start)
+    print("Loaded time: %s\n" % (time.time() - time_start))
 
     # Some lookups
-    time_start = time.time()
-    a = sentiwordnet.get_sentiment("unfortunately", "r", "en")
-    print(a)
-    a = sentiwordnet.get_sentiment("desafortunadamente", "r", "sp")
-    print(a)
-    print(time.time() - time_start)
+    words = [("unfortunately","r","en"), ("desafortunadamente", "r", "sp"),
+                ("exuberant","a","en"), ("stressful","a","en")]
+    for word,pos,language in words:
+        time_start = time.time()
+        a = sentiwordnet.get_sentiment(word, pos, language)
+        print("%s %s" % (word, a))
+        print("Lookup time: %s \n" % (time.time() - time_start))
