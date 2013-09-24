@@ -63,12 +63,15 @@ class Sentiwordnet:
             :param pos: part of speech (n:Noun, a:Adjetive, v:Verb, r=Adverb)
             :param language: language
         """
+        map_lenguage = {"english" : "en",
+                        "spanish" : "sp"}
+        lang = map_lenguage[language]
         # Assert input params
-        assert(language in ["sp", "en"])
+        assert(lang in ["sp", "en"])
         # Check if word and pos exists into the dict
-        if word in self.sentiwordnet[language]:
-            if pos in self.sentiwordnet[language][word]:
-                return self.sentiwordnet[language][word][pos]
+        if word in self.sentiwordnet[lang]:
+            if pos in self.sentiwordnet[lang][word]:
+                return self.sentiwordnet[lang][word][pos]
             else:
                 return None
         else:
