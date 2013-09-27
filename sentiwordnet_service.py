@@ -24,7 +24,7 @@ class MainHandler(tornado.web.RequestHandler):
         response = {}
         response["score"] = score
 
-        response["elipsed_time"] = time.time() - start
+        response["elapsed_time"] = time.time() - start
         # Return result
         self.write(response)
 

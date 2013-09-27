@@ -86,8 +86,8 @@ if __name__ == "__main__":
     print("Loaded time: %s\n" % (time.time() - time_start))
 
     # Some lookups
-    words = [("unfortunately","r","en"), ("desafortunadamente", "r", "sp"),
-                ("exuberant","a","en"), ("stressful","a","en")]
+    words = [("unfortunately","r","english"), ("desafortunadamente", "r", "spanish"),
+                ("exuberant","a","english"), ("stressful","a","english")]
     for word,pos,language in words:
         time_start = time.time()
         a = sentiwordnet.get_sentiment(word, pos, language)
